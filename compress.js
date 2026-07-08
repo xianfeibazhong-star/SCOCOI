@@ -103,6 +103,7 @@ async function searchScale(image, targetBytes) {
 
 }
 async function compressImage() {
+    app.moji = Number(mojiInput.value);
 
     const targetBytes = app.moji * 2;
 
