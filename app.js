@@ -69,7 +69,7 @@ async function initialize() {
 
     try {
 
-        const response = await fetch("sample/snpi.txt");
+
 
         app.text = await response.text();
 
