@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SCOCOI</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>SCOCOI</h1>
+
+        <p>
+            画像と文字列を変換し、youtubeコメントを介して画像を送るための機能です。
+            <br>送れる容量には限りがありますため、変換しますと指定文字数ぐらいに収まる程度に劣化させます。
+            <br>500を下回りますと、微粒子レベルでしか残らないです。
+　
+        </p>
+
+        <nav>
+            <a href="#" target="_blank">GitHub</a> |
+            <a href="#" target="_blank">使い方</a> |
+            <a href="#" target="_blank">更新履歴</a>
+        </nav>
+    </header>
+
+    <hr>
+
+    <main>
+
+        <div class="main-area">
+
+            <!-- 劣化画像 -->
+            <div class="image-area">
+
+                <h3>画像</h3>
+
+                <img
+                    id="rekkaImage"
+                    src="sample.jpeg"
+                    alt="画像">
+
+            </div>
+
+            <!-- テキスト -->
+            <div class="text-area">
+
+                <h3>文字列</h3>
+
+                <textarea
+    id="textBox"
+    spellcheck="false"
+    placeholder="こ↑こ↓に変換された文字列がで、でますよ
+画像に戻す際、データ以外のコメや空白が微レ存でも失敗します。"></textarea>
+
+            </div>
+
+        </div>
+
+        <hr>
+
+<div class="button-area">
+
+    <button id="decodeButton">
+        画像化
+    </button>
+
+    <button id="encodeButton">
+        文字化
+    </button>
+
+    <input
+        id="mojiInput"
+        type="number"
+        value="200"
+        min="1">
+
+    <span>文字</span>
+
+    <br><br>
+
+    <button id="saveButton">
+        保存
+    </button>
+
+    <button id="openButton">
+        参照
+    </button>
+
+    <span id="sanshoLabel">
+        snpi.jpeg
+    </span>
+
+    <input
+        id="fileInput"
+        type="file"
+        accept="image/*"
+        hidden>
+
+    <br><br>
+
+    <button id="copyButton">
+        コピ
+    </button>
+
+    <button id="pasteButton">
+        ぺ
+    </button>
+
+</div>
+
+    </main>
+
+    <script src="compress.js"></script>
+    <script src="encoder.js"></script>
+    <script src="decoder.js"></script>
+    <script src="app.js"></script>
+
+</body>
+</html>
